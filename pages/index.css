@@ -1,0 +1,7 @@
+/* VENDOR */
+  /* normalize */
+  @import url(../vendor/normalize.css);
+  /* fonts */
+  @import url(../vendor/font__inter.css);
+/* style */
+@import url(../style.css);
