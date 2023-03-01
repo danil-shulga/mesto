@@ -1,0 +1,11 @@
+.card__btn {
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  transition: ease-in .2s;
+  cursor: pointer;
+}
+.card__btn:hover {
+  opacity: .6;
+}

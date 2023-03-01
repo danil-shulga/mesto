@@ -13,24 +13,24 @@
     </header>
 
     <main class="main">
-      <section class="profile">
+      <section class="page__profile profile">
         <div class="profile__user user">
 
           <img class="user__avatar" src="./images/img/IMG_20221215_185022.jpg" alt="фото профиля">
 
-          <div class="user__text">
-            <div class="user__name-parent">
-              <h1 class="user__name">Жак-Ив Кусто</h1>
-              <button class="user__btn"></button>
+          <div class="user__info">
+            <div class="user__name-and-btn-wrapper">
+              <h1 class="user__name">жак-ив кусто</h1>
+              <button class="user__btn-edit"></button>
             </div>
             <h2 class="user__description">Исследователь океана</h2>
           </div>
 
         </div>
-        <button class="profile__btn"></button>
+        <button class="profile__btn-add-card"></button>
       </section>
 
-      <section class="cards">
+      <section class="page__cards cards" aria-label="фото с разных мест">
         <ul class="cards__list">
           <li class="cards__card card">
             <img src="./images/img/alex-quezada-VhHvzqmawLI-unsplash.jpg" alt="" class="card__img">
@@ -79,7 +79,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="page__footer footer">
       <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
   </div>

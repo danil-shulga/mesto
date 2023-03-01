@@ -1,0 +1,12 @@
+.profile__btn-add-card {
+  align-self: center;
+  width: 150px;
+  height: 50px;
+  background: #000 url(../../../images/icon/icon_plus.svg) center/22px 22px no-repeat;
+  border: 1px solid #fff;
+  transition: ease-in .2s;
+  cursor: pointer;
+}
+.profile__btn-add-card:hover {
+  opacity: .6;
+}

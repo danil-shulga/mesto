@@ -1,0 +1,17 @@
+.user__btn-edit {
+  width: 22px;
+  height: 22px;
+  /* пытался привязать кнопку к первой строке. сначала сделал с помощью позиционирования но потом подумал что это не лучший вариант + при большом объеме текста она уезжала. переделал, сделав дополнительную обертку, но не получилось выровнять относительно строки и пришлось подгонять с помощью margin-top, что тоже как мне кажется не лучший вариант. интересно узнать корректно ли такое решение и как это можно было реализовать иначе */
+  margin-top: 17px;
+  align-self: baseline;
+  /* position: absolute;
+  top: 38px;
+  right: -43px; */
+  background: #000 url(../../../images/icon/icon_pen.svg) center/10px 10px no-repeat;
+  border: 1px solid #fff;
+  transition: ease-in .2s;
+  cursor: pointer;
+}
+.user__btn-edit:hover {
+  opacity: .6;
+}
