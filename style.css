@@ -48,21 +48,34 @@
 }
 
 .user {
-  position: relative;
+  /* position: relative; */
   display: flex;
 }
 
 .user__text {
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: center;
+
+  /* position: relative; */
+
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+
+.user__name-parent {
+  display: flex;
 }
 
 .user__name {
-  margin: 0;
+  margin: 0 20px 0 0;
   font-weight: 500;
+  max-width: 400px;
   font-size: 42px;
   line-height: 1.15;
+  text-transform: capitalize;
 }
 
 .user__description {
@@ -75,9 +88,12 @@
 .user__btn {
   width: 22px;
   height: 22px;
-  position: absolute;
+  /* пытался привязать кнопку к центру первой строки. сначала сделал с помощью позиционирования но потом подумал что это не лучший вариант + при большом объеме текста она уезжала. переделал, сделав дополнительную обертку, но не получилось выровнять относительно строки и пришлось подгонять с помощью margin-top, что тоже как мне кажется не лучший вариант. интересно узнать корректно ли такое решение и как это можно было реализовать иначе */
+  margin-top: 17px;
+  align-self: baseline;
+  /* position: absolute;
   top: 38px;
-  right: -43px;
+  right: -43px; */
   background: #000 url(./images/icon/icon_pen.svg) center/10px 10px no-repeat;
   border: 1px solid #fff;
   transition: ease-in .2s;
@@ -125,6 +141,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 282px);
@@ -137,18 +154,24 @@
   height: 360px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 .card__img {
-  width: 100%;
-  /* height: 100%; */
-  object-fit: cover;
   display: block;
+  width: 100%;
+  height: calc(100% - 80px);
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .card__footer {
   height: 80px;
   padding: 0 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
 
   display: flex;
   justify-content: space-between;
