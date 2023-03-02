@@ -1,5 +1,7 @@
 .popup__input-text {
   margin-top: 25px;
+  width: 100%;
+  box-sizing: border-box;
 
   font-size: 14px;
   line-height: 2;
