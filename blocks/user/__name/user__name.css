@@ -7,3 +7,10 @@
   line-height: 1.15;
   text-transform: capitalize;
 }
+
+@media (max-width:530px) {
+  .user__name {
+    font-size: 27px;
+    margin: 0 10px 0 28px;
+  }
+}

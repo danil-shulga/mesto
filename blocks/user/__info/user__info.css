@@ -10,3 +10,10 @@
   overflow-wrap: break-word;
   hyphens: manual;
 }
+
+@media (max-width:530px) {
+  .user__info {
+    margin-top: 27px;
+    text-align: center;
+  }
+}

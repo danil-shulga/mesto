@@ -1,12 +1,32 @@
 .profile__btn-add-card {
-  align-self: center;
   width: 150px;
   height: 50px;
+
+  padding: 0;
+  flex: 0 1 auto;
+  align-self: center;
+
   background: #000 url(../../../images/icon/icon_plus.svg) center/22px 22px no-repeat;
   border: 1px solid #fff;
+
   transition: ease-in .2s;
   cursor: pointer;
 }
 .profile__btn-add-card:hover {
   opacity: .6;
+}
+
+@media (max-width: 700px) {
+  .profile__btn-add-card {
+    margin: 36px 0 0;
+    width: 100%;
+    max-width: 485px;
+  }
+}
+
+@media (max-width: 530px) {
+  .profile__btn-add-card {
+    margin: 32px 0 0;
+    background-size: 16px 16px;
+  }
 }

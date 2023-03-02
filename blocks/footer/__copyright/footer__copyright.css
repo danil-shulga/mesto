@@ -5,3 +5,9 @@
   line-height: 1.15;
   font-weight: 400;
 }
+
+@media (max-width: 530px) {
+  .footer__copyright {
+    font-size: 14px;
+  }
+}
