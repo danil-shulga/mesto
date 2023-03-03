@@ -6,6 +6,8 @@
   font-size: 42px;
   line-height: 1.15;
   text-transform: capitalize;
+  overflow-wrap: break-word;
+  hyphens: manual;
 }
 
 @media (max-width:530px) {

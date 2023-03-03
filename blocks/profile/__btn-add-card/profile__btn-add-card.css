@@ -6,8 +6,9 @@
   flex: 0 1 auto;
   align-self: center;
 
-  background: #000 url(../../../images/icon/icon_plus.svg) center/22px 22px no-repeat;
-  border: 1px solid #fff;
+  background: rgba(0, 0, 0, .0) url(../../../images/icon/icon_plus.svg) center/22px 22px no-repeat;
+  border: 2px solid #fff;
+  border-radius: 2px;
 
   transition: ease-in .2s;
   cursor: pointer;

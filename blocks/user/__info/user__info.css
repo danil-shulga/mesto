@@ -5,10 +5,11 @@
   justify-content: center;
   align-self: center;
 
-  /* position: relative; */
+  /* добавил свойства в name и description отдельно.
+  но разве нельзя задать их родителю чтобы не про писывать в каждом блоке отдельно ? */
 
-  overflow-wrap: break-word;
-  hyphens: manual;
+  /* overflow-wrap: break-word;
+  hyphens: manual; */
 }
 
 @media (max-width:530px) {

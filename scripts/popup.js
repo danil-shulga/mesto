@@ -2,27 +2,16 @@ let userName = document.querySelector('.user__name');
 let userDescription = document.querySelector('.user__description');
 
 let userEditBtn = document.querySelector('.user__btn-edit');
-let addCardBtn = document.querySelector('.profile__btn-add-card');
 
 let popup = document.querySelector('.popup');
 let closePopupBtn = popup.querySelector('.popup__btn-close');
-let savePopupBtn = popup.querySelector('.popup__btn-save');
+// let savePopupBtn = popup.querySelector('.popup__btn-save');
+let formUserEdit = popup.querySelector('.form__user-edit')
 
-let inputUserName = popup.querySelector('.popup__user-name')
-let inputUserDescription = popup.querySelector('.popup__user-description')
+let inputUserName = popup.querySelector('.popup__input_text_user-name')
+let inputUserDescription = popup.querySelector('.popup__input_text_user-description')
 
-userEditBtn.addEventListener('click', openPopupAndSetText);
-closePopupBtn.addEventListener('click', switchPopup);
 
-savePopupBtn.addEventListener('click', changeText);
-savePopupBtn.onclick = function (evt) {
-  evt.preventDefault();
-}
-
-// не до конца разобрался как работает .preventDefault() по этому воспользовался решением которое нашел
-// function cancelEvent(evt) {
-//   evt.preventDefault();
-// }
 
 function setInputValue(inputValue, textContent) {
   inputValue.value = textContent.textContent;
@@ -42,12 +31,28 @@ function openPopupAndSetText() {
   setInputValue(inputUserDescription, userDescription);
 }
 
-function changeText() {
+function changeText(event) {
   setTextContentFromInputValue(userName, inputUserName);
   setTextContentFromInputValue(userDescription, inputUserDescription);
-  switchPopup()
-  // cancelEvent();
+  event.preventDefault();
+  switchPopup();
 }
 
+function closePopupByClickOverlay(event) {
+  if (event.target !== event.currentTarget) {
+    return;
+  }
+  switchPopup();
+}
 
-console.log(inputUserName.value)
+userEditBtn.addEventListener('click', openPopupAndSetText);
+closePopupBtn.addEventListener('click', switchPopup);
+popup.addEventListener('click', closePopupByClickOverlay);
+
+formUserEdit.addEventListener('submit', changeText);
+
+// savePopupBtn.onclick = function (evt) {
+//   evt.preventDefault();
+// }
+
+// console.log(inputUserName.value)
