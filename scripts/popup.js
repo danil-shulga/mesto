@@ -6,7 +6,7 @@ let userEditBtn = document.querySelector('.user__btn-edit');
 let popup = document.querySelector('.popup');
 let closePopupBtn = popup.querySelector('.popup__btn-close');
 // let savePopupBtn = popup.querySelector('.popup__btn-save');
-let formUserEdit = popup.querySelector('.form__user-edit')
+let formUserEdit = popup.querySelector('.popup__form')
 
 let inputUserName = popup.querySelector('.popup__input_text_user-name')
 let inputUserDescription = popup.querySelector('.popup__input_text_user-description')
@@ -32,9 +32,9 @@ function openPopupAndSetText() {
 }
 
 function changeText(event) {
+  event.preventDefault();
   setTextContentFromInputValue(userName, inputUserName);
   setTextContentFromInputValue(userDescription, inputUserDescription);
-  event.preventDefault();
   switchPopup();
 }
 
@@ -47,9 +47,9 @@ function closePopupByClickOverlay(event) {
 
 userEditBtn.addEventListener('click', openPopupAndSetText);
 closePopupBtn.addEventListener('click', switchPopup);
-popup.addEventListener('click', closePopupByClickOverlay);
 
 formUserEdit.addEventListener('submit', changeText);
+popup.addEventListener('click', closePopupByClickOverlay);
 
 // savePopupBtn.onclick = function (evt) {
 //   evt.preventDefault();
