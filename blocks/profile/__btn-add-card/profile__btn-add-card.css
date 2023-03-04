@@ -1,5 +1,6 @@
 .profile__btn-add-card {
   width: 150px;
+  min-width: 50px;
   height: 50px;
 
   padding: 0;
@@ -21,7 +22,6 @@
   .profile__btn-add-card {
     margin: 36px 0 0;
     width: 100%;
-    max-width: 485px;
   }
 }
 

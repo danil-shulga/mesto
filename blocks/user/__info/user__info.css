@@ -1,19 +1,18 @@
 .user__info {
-  max-width: 500px;
+  max-width: calc(100% - 150px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
 
-  /* добавил свойства в name и description отдельно.
-  но разве нельзя задать их родителю чтобы не про писывать в каждом блоке отдельно ? */
-
   /* overflow-wrap: break-word;
   hyphens: manual; */
+
 }
 
 @media (max-width:530px) {
   .user__info {
+    max-width: 100%;
     margin-top: 27px;
     text-align: center;
   }

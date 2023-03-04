@@ -4,8 +4,11 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.15;
-  overflow-wrap: break-word;
-  hyphens: manual;
+
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (max-width:530px) {
